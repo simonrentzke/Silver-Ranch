@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Silver Ranch</title>
+    <meta content='chrome=IE8' http-equiv='X-UA-Compatible' />
     <link href="/stylesheets/reset.css" media="all" rel="stylesheet" type="text/css"/><link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"/>
     <link href='http://fonts.googleapis.com/css?family=Artifika&amp;v2' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo&amp;v2' rel='stylesheet' type='text/css' />
@@ -151,5 +152,31 @@
       </div>
       <div class='footer'></div>
     </div>
+    <!--[if IE]>
+      <script type="text/javascript" 
+       src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+    
+      <style>
+       .chromeFrameInstallDefaultStyle {
+         width: 750px
+         border: 10px solid blue;
+       }
+      </style>
+    
+      <div id="prompt">
+       <!-- if IE without GCF, prompt goes here -->
+      </div>
+    
+      <script>
+       // The conditional ensures that this code will only execute in IE,
+       // Therefore we can use the IE-specific attachEvent without worry
+       window.attachEvent("onload", function() {
+         CFInstall.check({
+           mode: "inline", // the default
+           node: "prompt"
+         });
+       });
+      </script>
+    <![endif]-->
   </body>
 </html>
